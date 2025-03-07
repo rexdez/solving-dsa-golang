@@ -1,6 +1,6 @@
 package main
 
-func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
+func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	var carry int = 0
 	var result *ListNode = &ListNode{}
 	res_ptr := result

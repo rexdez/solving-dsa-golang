@@ -9,27 +9,37 @@ type ListNode struct {
 	Next *ListNode
 }
 
+type TreeNode struct {
+	Val int
+	Left *TreeNode
+	Right *TreeNode
+}
+
 // Finding minimum of average of minimum and maximum value in an array
 func main() {
-	fmt.Println(addTwoNumbers(
-		&ListNode{
+	fmt.Println(isSameTree(
+		&TreeNode{
 			Val: 9,
-			Next: &ListNode{
+			Left: &TreeNode{
 				Val: 9,
-				Next: &ListNode{
-					Val: 9,
-					Next: &ListNode{
-						Val: 9,
-						Next: nil,
-					},
-				},
+				Left: nil,
+			},
+			Right: &TreeNode{
+				Val: 8,
+				Right: nil,
 			},
 		},
-		&ListNode{
+		&TreeNode{
 			Val: 9,
-			Next: &ListNode{
+			Left: &TreeNode{
 				Val: 9,
-				Next: nil,
+				Left: &TreeNode{
+					Val: 4,
+				},
+			},
+			Right: &TreeNode{
+				Val: 8,
+				Right: nil,
 			},
 		},
 	))
