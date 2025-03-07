@@ -2,25 +2,27 @@ package main
 
 import (
 )
-// jjabakabaccd
+
 func longestPalindrome(s string) string {
-	var longest_str string
-	chars := []rune(s)
-	for i:=0; i < len(s);i++{
-		for j:=i+1; j < len(s); j++ {
-			str := string(chars[i:j+1])
-			if chars[j] == chars[i] && str == reverseStr(str){
-				longest_str == str
-			}
+	longest_palindrome := ""
+	for i := range len(s) {
+		pal_str := getPalindrome(s, i, i)
+		pal_str2 := getPalindrome(s, i, i+1)
+
+		if len(pal_str) > len(longest_palindrome) {
+			longest_palindrome = pal_str
+		}
+		if len(pal_str2) > len(longest_palindrome) {
+			longest_palindrome = pal_str2
 		}
 	}
-	return longest_str
+	return longest_palindrome
 }
 
-func reverseStr(s string) string{
-	chars := []rune(s)
-	for i, j := 0,  len(s); j > i; i,j = i+1, j-1 {
-		chars[i], chars[j] = chars[j], chars[i]
+func getPalindrome(s string, l, r int) string {
+	for l >= 0 && r < len(s) && s[l] == s[r] {
+		l--
+		r++
 	}
-	return string(chars)
+	return s[l+1:r]
 }
