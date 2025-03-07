@@ -3,7 +3,7 @@ package main
 import (
 )
 
-func longestPalindrome(s string) string {
+func LongestPalindrome(s string) string {
 	longest_palindrome := ""
 	for i := range len(s) {
 		pal_str := getPalindrome(s, i, i)
