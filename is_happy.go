@@ -1,11 +1,13 @@
 package main
 
-import "fmt"
-
 func IsHappy(n int) bool {
-	for n != 1 && n != 4 {
+	dump := make(map[int]bool)
+	for n != 1 {
 		n = getSumOfSquares(n)
-		fmt.Println(n)
+		if _, ok := dump[n]; ok {
+			return false
+		}
+		dump[n] = false
 	}
 	return n == 1
 }
@@ -13,8 +15,8 @@ func IsHappy(n int) bool {
 func getSumOfSquares(n int) int {
 	var sum int
 	for n > 0 {
-		a := int((n % 10))
-		sum +=  (a*a)
+		a := n % 10
+		sum += (a * a)
 		n /= 10
 	}
 	return sum

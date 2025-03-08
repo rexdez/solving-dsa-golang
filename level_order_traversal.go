@@ -12,7 +12,6 @@ func LevelOrder(root *TreeNode) [][]int {
 }
 
 func addNodes(arr [][]int, depth int, left, right *TreeNode) [][]int {
-
 	if (left != nil || right != nil) && len(arr) <= depth {
 		arr = append(arr, []int{})
 	}
