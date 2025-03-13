@@ -14,11 +14,3 @@ func MaxSubArray(nums []int) int {
     }
 	return largest_sum
 }
-
-// func getSliceSum(nums []int) int {
-// 	var sum int = 0
-// 	for _, val := range nums {
-// 		sum += val
-// 	}
-// 	return sum
-// }
