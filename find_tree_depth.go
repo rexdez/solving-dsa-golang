@@ -1,8 +1,7 @@
 package main
 
-
 func maxDepth(root *TreeNode) int {
-	if root == nil{
+	if root == nil {
 		return 0
 	}
 	var depth1, depth2 int
@@ -11,9 +10,20 @@ func maxDepth(root *TreeNode) int {
 	return max(depth1, depth2) + 1
 }
 
+// This is primarily DFS not BFS
+func MaxDepthBFS(root *TreeNode) int {
+	if root == nil {
+		return 0
+	}
+	var depth1, depth2 int
+	depth1 = MaxDepthBFS(root.Left)
+	depth2 = MaxDepthBFS(root.Right)
+	return max(depth1, depth2) + 1
+}
+
 func max(a, b int) int {
-	if a > b{
-		return a 
+	if a > b {
+		return a
 	}
 	return b
 }
