@@ -6,7 +6,6 @@ import (
 
 func largestDivisibleSubset(nums []int) []int {
 	slices.Sort(nums)
-
 	var temp []int = make([]int, len(nums))
 	var prev_idx []int = make([]int, len(nums))
 
