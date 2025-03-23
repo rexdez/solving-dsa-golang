@@ -18,10 +18,10 @@ func MaxDepthBFS(root *TreeNode) int {
 	var depth1, depth2 int
 	depth1 = MaxDepthBFS(root.Left)
 	depth2 = MaxDepthBFS(root.Right)
-	return max(depth1, depth2) + 1
+	return getmax(depth1, depth2) + 1
 }
 
-func max(a, b int) int {
+func getmax(a, b int) int {
 	if a > b {
 		return a
 	}
