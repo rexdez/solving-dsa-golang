@@ -25,7 +25,7 @@ func largestDivisibleSubset(nums []int) []int {
 		}
 	}
 
-	// reconstructing the original substring
+	// reconstructing the original subset
 	var max_subset []int
 	for max_idx >=0 {
 		max_subset = append([]int{nums[max_idx]}, max_subset...)

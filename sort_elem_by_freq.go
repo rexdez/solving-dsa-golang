@@ -1,7 +1,6 @@
 package main
 
 import (
-	// "fmt"
 	"container/heap"
 	"sort"
 )

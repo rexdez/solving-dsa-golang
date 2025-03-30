@@ -11,7 +11,7 @@ func TestLargestDivisibleSubset(t *testing.T) {
 		{1,2,3},
 		{1,2,4,8},
 		{2,3,7,10,13},
-		{2,3,9,27,13},
+		{27,13,9,2,3},
 		{4,8,10,240},
 	}
 	want := [][]int{

@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type ListNode struct {
 	Val int
@@ -15,8 +17,17 @@ type TreeNode struct {
 
 // Finding minimum of average of minimum and maximum value in an array
 func main() {
-	obj := Constructor(3, []int{1,4,5,8,2})
-	fmt.Println(obj)
- 	param_1 := obj.Add(3)
-	fmt.Println(param_1)
+	ch := make(chan int)
+	ch2 := make(chan chan int)
+	go func () {
+		ch2 <- ch
+	}()
+	
+	res := <- ch2
+	go func() {
+		ch <- 555
+	}()
+	val := <- res
+	fmt.Println(val)
 }
+
