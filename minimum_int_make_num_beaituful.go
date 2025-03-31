@@ -2,12 +2,12 @@
 package main
 
 func MakeIntegerBeautiful(n int64, target int) int64 {
-	if getDigitSum(n) <= int(target) {
+	if getDigitSum(n) <= target {
 		return 0
 	}
 	base := int64(1)
 	num := n
-	for getDigitSum(n) > int(target) {
+	for getDigitSum(n) > target {
 		n = (n/10) + 1
 		base *=10
 

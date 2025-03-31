@@ -22,12 +22,12 @@ func Test(t *testing.T) {
 	}
 }
 
-const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+const long_charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 func RandStringBytes(n int) string {
     b := make([]byte, n)
     for i := range b {
-        b[i] = charset[rand.Intn(len(charset))]
+        b[i] = long_charset[rand.Intn(len(long_charset))]
     }
     return string(b)
 }
