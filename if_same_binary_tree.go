@@ -1,9 +1,6 @@
 package main
 
-import "fmt"
-
 func IsSameTree(p *TreeNode, q *TreeNode) bool {
-	fmt.Println("p:", p, "\nq:", q)
 	if p == nil && q ==nil {
 		return true
 	}

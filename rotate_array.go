@@ -1,11 +1,7 @@
 package main
 
-
-
-
 func rotateArr(nums []int, k int) {
     n := len(nums)
-	
 	k %= n
 	reverse(nums, 0, n-1)
 	reverse(nums, k, n-1)
