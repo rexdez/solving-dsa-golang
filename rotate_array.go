@@ -1,5 +1,16 @@
 package main
 
+
+func rotateArrII(nums []int, k int) []int{
+    n := len(nums)
+	loc := n-(k%n)
+	
+	res := nums[loc:]
+	res = append(res, nums[:loc]...)
+	return res
+}
+
+
 func rotateArr(nums []int, k int) {
     n := len(nums)
 	k %= n
