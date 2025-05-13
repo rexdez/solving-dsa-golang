@@ -5,6 +5,7 @@ import "testing"
 func TestMaxAlternatingSum(t *testing.T) {
 	test_data := [][]int{
 		{4,2,5,3},
+		{4},
 		{5,6,7,8},
 		{6,2,1,2,4,5},
 		{374,126,84,237,195,139,328,353,286,113,351,167,394,398,29,118,17,162,206,138,34,
@@ -14,7 +15,7 @@ func TestMaxAlternatingSum(t *testing.T) {
 		135,257,391,92,260,55,321,153,328,260,312,102,79,192},
 	}
 	want := []int64{
-		7,8,10, 7256,
+		7, 4, 8, 10, 7256,
 	}
 	for i := range test_data {
 		got := maxAlternatingSum(test_data[i])

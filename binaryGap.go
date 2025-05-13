@@ -26,8 +26,6 @@
 
 package main
 
-import "fmt"
-
 func binaryGap(N int) int{
 	started := false
 	maxGap := 0
@@ -44,6 +42,5 @@ func binaryGap(N int) int{
 		}
 		N >>= 1
 	}
-	fmt.Println(maxGap)
 	return maxGap
 }

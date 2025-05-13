@@ -17,7 +17,7 @@ type TreeNode struct {
 
 // Finding minimum of average of minimum and maximum value in an array
 func main() {
-	channelTrial()
+	// channelTrial()
 }
 
 func channelTrial() {

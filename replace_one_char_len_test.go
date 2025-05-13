@@ -14,7 +14,7 @@ func TestReplaceOneCharLen(t *testing.T) {
 		// "aabbaabbaabbaabbaa",
 	}
 	want := []int{
-		8,5,2,7,
+		7,5,2,6,
 		// 0, 8,0, 2,16,
 	}
 

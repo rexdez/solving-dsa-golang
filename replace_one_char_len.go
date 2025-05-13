@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func replaceOneCharLen(S string) int{
 	max_len := 0
 	chars := []rune(S)
@@ -10,7 +8,6 @@ func replaceOneCharLen(S string) int{
 	i:=0
 	for i < len(chars){
 		if i>=2 && chars[i] == chars[i-1] && chars[i] == chars[i-2]{
-			fmt.Println("  ",string(chars[i]), string(chars[i-1]), string(chars[i-2]))
 			count ++
 			if count < 2 {
 				if chars[i] == 'a' {
@@ -26,7 +23,6 @@ func replaceOneCharLen(S string) int{
 				count =0
 			}
 		}
-		fmt.Println(start, string(chars))
 		max_len = max(max_len, i-start+1)
 		i++
 	}

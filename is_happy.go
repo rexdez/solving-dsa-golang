@@ -1,5 +1,6 @@
 package main
 
+
 func IsHappy(n int) bool {
 	dump := make(map[int]bool)
 	for n != 1 {
