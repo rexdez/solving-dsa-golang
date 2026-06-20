@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+
 
 type ListNode struct {
 	Val int
@@ -18,20 +16,21 @@ type TreeNode struct {
 // Finding minimum of average of minimum and maximum value in an array
 func main() {
 	// channelTrial()
+	BFStraversal()
 }
 
-func channelTrial() {
-	ch := make(chan int)
-	ch2 := make(chan chan int)
-	go func () {
-		ch2 <- ch
-	}()
+// func channelTrial() {
+// 	ch := make(chan int)
+// 	ch2 := make(chan chan int)
+// 	go func () {
+// 		ch2 <- ch
+// 	}()
 	
-	res := <- ch2
-	go func() {
-		ch <- 555
-	}()
-	val := <- res
-	fmt.Println(val)
-}
+// 	res := <- ch2
+// 	go func() {
+// 		ch <- 555
+// 	}()
+// 	val := <- res
+// 	fmt.Println(val)
+// }
 

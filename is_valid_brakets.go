@@ -26,9 +26,10 @@ func isValidString(s string) bool{
 	}
 	
 	for _, char := range s {
-		if char == '(' || char == '{' || char == '[' {
+		switch char {
+		case '(', '{', '[':
 			stack = append(stack, char)
-		} else if char == ')' || char == '}' || char == ']'  {
+		case ')', '}', ']':
 			last_elem := stack[len(stack) -1]
 			stack = stack[:len(stack)-1]
 			if brackets[char] != last_elem {
